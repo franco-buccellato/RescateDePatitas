@@ -8,11 +8,12 @@ import TipoMascota from "RescateDePatitas\js\tipoMascota.js";
 import Usuario from "RescateDePatitas\js\Usuario.js"
 */
 
-let dueniosRegistrados = new Array(); 
+let duenioActual;
+let dueniosRegistrados;
 
 function main() {
-    console.log("Estoy corriendo.");
-    cargarDuenioAdmin();
+    //console.log("Estoy corriendo.");
+    //cargarDuenioAdmin();
 }
 
 function cargarDuenioAdmin() {
@@ -28,8 +29,7 @@ function cargarDuenioAdmin() {
         'Santos Vega 5822',
         '1133235987'
     );
-    dueniosRegistrados.push(duenioAdmin);
-    localStorage.setItem('duenio', JSON.stringify(duenioAdmin));
+    agregarNuevoDuenio(duenioAdmin);
     console.log("Cargue Duenio Admin.");
 }
 
@@ -41,15 +41,20 @@ function validarUsuario() {
     console.log("La contraseña ingresada es: " + contrasenia);
     if(usuario != "") {
         if(contrasenia != "") {
+            dueniosRegistrados = localStorage.getItem('duenios');
+            dueniosRegistrados = JSON.parse(dueniosRegistrados);
+            duenioActual = dueniosRegistrados.find(
+                unDuenio =>
+                unDuenio.usuario.usuario === usuario &
+                unDuenio.usuario.contrasenia === contrasenia
+            );
             if(
-                dueniosRegistrados.find(
-                    unDuenio =>
-                    unDuenio.usuario.usuario === usuario &
-                    unDuenio.usuario.contrasenia === contrasenia
-                ) != null
+                duenioActual != null
             ) {
                 console.log("Usuario y Contraseña Validado.");
 
+                localStorage.setItem('duenioActual', JSON.stringify(duenioActual));
+                
                 //Redirecciono a Inicio
                 window.location.href = "index.html";
 
@@ -151,11 +156,60 @@ function validacionCamposParaCreacion(
             return true;
         }
         return false;
-    }
+}
 
 function agregarNuevoDuenio(nuevoDuenio) {
-    dueniosRegistrados.push(nuevoDuenio);
+    let listadoDuenios = localStorage.getItem('duenios');
+    listadoDuenios = JSON.parse(listadoDuenios);
+    listadoDuenios.push(nuevoDuenio);
     console.log("Dueño agregado.");
+    localStorage.setItem('duenios', JSON.stringify(listadoDuenios));
+}
+
+function registrarMascota() {
+    let nombre = document.getElementById('registro-nombre').value;
+    let apodo = document.getElementById('registro-apodo').value;
+    let edad = document.getElementById('registro-edad').value;
+    let sexo = document.getElementById('registro-sexo').value;
+    let especie = document.getElementById('registro-especie').value;
+    let raza = document.getElementById('registro-raza').value;
+    let descripcion = document.getElementById('registro-descripcion').value;
+    let fotos = document.getElementById('registro-fotos').value;
+    let nuevaMascota;
+    if(validacionCamposParaRegistroMascota(nombre, apodo, edad, sexo, especie, raza, descripcion, fotos) === true) {
+        nuevaMascota = new Mascota(especie, nombre, apodo, edad, sexo, raza, descripcion, fotos, Estado.REGISTRADO);
+        duenioActual = localStorage.getItem('duenioActual');
+        duenioActual = JSON.parse(duenioActual);
+        let listadoDuenios = localStorage.getItem('duenios');
+        listadoDuenios = JSON.parse(listadoDuenios);
+        for(let i=0; i < listadoDuenios.length;  i++) {
+            if(listadoDuenios[i].usuario.usuario === duenioActual.usuario.usuario) {
+                console.log(listadoDuenios[i]);
+                //listadoDuenios[i].agregarMascota(nuevaMascota);
+                listadoDuenios[i].mascotas.push(nuevaMascota);
+                localStorage.setItem('duenios', JSON.stringify(listadoDuenios));
+                console.log('Se agrego la mascota correctamente.');
+            }
+        }
+    } else {
+        console.log("Alguno o varios de los campos está vacio.");
+    }
+}
+
+function validacionCamposParaRegistroMascota(nombre, apodo, edad, sexo, especie, raza, descripcion, fotos) {
+    if(
+        nombre != "",
+        apodo != "",
+        edad != "",
+        sexo != "",
+        especie != "",
+        raza != "",
+        descripcion != "",
+        fotos != ""
+    ) {
+        return true;
+    }
+    return false;
 }
 
 class Usuario {
@@ -195,4 +249,56 @@ class Duenio {
         this.mascotas = new Array();
     }
 
+    agregarMascota(nuevaMascota) {
+        this.mascotas.push(nuevaMascota);
+    }
+
+}
+
+class Mascota {
+
+    constructor ( 
+        tipoMascota,
+        nombre,
+        apodo,
+        edadAproximada,
+        sexo,
+        raza,
+        descripcionFisica,
+        fotos,
+        estado
+    ) {
+        this.tipoMascota = tipoMascota;
+        this.nombre = nombre;
+        this.apodo = apodo;
+        this.edadAproximada = edadAproximada;
+        this.sexo = sexo;
+        this.raza = raza;
+        this.descripcionFisica = descripcionFisica;
+        this.fotos = fotos;
+        this.estado = estado;
+    }
+
+}
+
+const Estado = {
+    PERDIDO: "perdido",
+    ENCONTRADO: "encontrado",
+    REGISTRADO: "registrado"
+}
+
+const Sexo = {
+    MASCULINO: "M",
+    FEMENINO: "F",
+    INDETERMINADO: "I"
+}
+
+const TipoDocumento = {
+    DNI: "dni",
+    PASAPORTE: "pasaporte"
+}
+
+const TipoMascota = {
+    PERRO: "perro",
+    GATO: "gato"
 }
