@@ -25,7 +25,7 @@
 	<script src="https://kit.fontawesome.com/a2beca5d14.js" crossorigin="anonymous"></script>
 
 </head>
-	<body>
+	<body onload="main()">
 		<header id="principio">
 			<div class="encabezado">
 				<a href="index.html"><img class="logo-inicio" src="imagenes/icono-principal.png"></img></a>
@@ -70,13 +70,13 @@
 			<div class="container__regsitro">
 				<div class="registro">
 					<h2>Inicio de Sesion:</h2>
-					<form>
+					<form action="index.html">
 						<ul>
 							<li><label class="registro__label">Ingrese su nombre de usuario:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="usuario-logueo" required></li>
 							<li><label class="registro__label">Ingrese su contraseña:</label></li>
-							<li><input type="password" class="registro__input"></li>
-							<li><input type="submit" class="boton-submit" value="Iniciar Sesión"></li>
+							<li><input type="password" class="registro__input" id="contrasenia-logueo" required></li>
+							<li><input type="button" class="boton-submit" value="Iniciar Sesión" onclick="validarUsuario()"></li>
 						</ul>
 					</form>
 					<a href="crearUsuario.html">Si no se encuentra registrado ¡Hacer Click Aqui! </a>
@@ -129,5 +129,6 @@
 				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a DDS2021</p>
 			</div>
 		</footer>
+		<script src="js/main.js"></script>
 	</body>
 </html>

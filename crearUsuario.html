@@ -73,16 +73,16 @@
 					<form>
 						<ul>
 							<li><label class="registro__label">Ingrese su nombre:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="creacion-nombre" required></li>
 							<li><label class="registro__label">Ingrese su apellido:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="creacion-apellido" required></li>
 							<li><label class="registro__label">Ingrese su mail:</label></li>
-							<li><input type="mail" class="registro__input"></li>
+							<li><input type="mail" class="registro__input" id="creacion-mail" required></li>
 							<li><label class="registro__label">Ingrese su edad:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="creacion-edad" required></li>
 							<li><label class="registro__label">Seleccione el sexo:</label></li>
 							<li>
-								<select name="sexo" class="registro__input">
+								<select name="sexo" class="registro__input" id="creacion-sexo" required>
 									<option>Seleccione el sexo correspondiente</option> 
 									<option value="M">Masculino</option> 
 									<option value="F">Femenino</option>
@@ -91,25 +91,25 @@
 							</li>
 							<li><label class="registro__label">Seleccione tipo documentacion:</label></li>
 							<li>
-								<select name="especie" class="registro__input">
+								<select name="especie" class="registro__input" id="creacion-tipo-documento" required>
 									<option>Seleccione el tipo de documentacion correspondiente</option> 
 									<option value="DNI">DNI</option> 
 									<option value="PASAPORTE">Pasaporte</option>
 								</select>
 							</li>
 							<li><label class="registro__label">Ingrese su numero de identificacion:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="creacion-numero-documento" required></li>
 							<li><label class="registro__label">Ingrese su direccion:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="creacion-direccion" required></li>
 							<li><label class="registro__label">Ingrese su telefono:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="creacion-telefono" required></li>
 							<li><label class="registro__label">Ingrese su nombre de usuario:</label></li>
-							<li><input type="text" class="registro__input"></li>
+							<li><input type="text" class="registro__input" id="creacion-usuario" required></li>
 							<li><label class="registro__label">Ingrese su contraseña:</label></li>
-							<li><input type="password" class="registro__input"></li>
+							<li><input type="password" class="registro__input" id="creacion-contrasenia1" required></li>
 							<li><label class="registro__label">Repita su contraseña:</label></li>
-							<li><input type="password" class="registro__input"></li>
-							<li><input type="submit" class="boton-submit" value="Registrarme"></li>
+							<li><input type="password" class="registro__input" id="creacion-contrasenia2" required></li>
+							<li><input type="button" class="boton-submit" value="Registrarme" onclick="registrarUsuario()"></li>
 						</ul>
 					</form>
 				</div>
@@ -161,5 +161,6 @@
 				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a DDS2021</p>
 			</div>
 		</footer>
+		<script src="js/main.js"></script>
 	</body>
 </html>
