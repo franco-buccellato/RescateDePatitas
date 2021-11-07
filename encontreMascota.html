@@ -66,14 +66,49 @@
 			</nav>
 		</header>
 		<section class="section-encontre">
-
-
-
-
-
-
-
-
+			<div class="container__regsitro">
+				<div class="registro">
+					<h3>Complete los siguientes datos de la mascota que encontro:</h3>
+					<form>
+						<ul>
+							<li><label class="registro__label">Ingrese la edad estimada:</label></li>
+							<li><input type="text" class="registro__input"></li>
+							<li><label class="registro__label">Seleccione el sexo:</label></li>
+							<li>
+								<select name="sexo" class="registro__input">
+									<option>Seleccione el sexo correspondiente</option> 
+									<option value="M">Macho</option> 
+									<option value="H">Hembra</option>
+									<option value="I">Indefinido</option> 
+								</select>
+							</li>
+							<li><label class="registro__label">Seleccione la especie:</label></li>
+							<li>
+								<select name="especie" class="registro__input">
+									<option>Seleccione la especie correspondiente</option> 
+									<option value="P">Perro</option> 
+									<option value="G">Gato</option>
+								</select>
+							</li>
+							<li><label class="registro__label">Seleccione la raza:</label></li>
+							<li>
+								<select name="raza" class="registro__input">
+									<option>Seleccione la raza correspondiente</option> 
+									<option value="P">Perro</option> 
+									<option value="G">Gato</option>
+								</select>
+							</li>
+							<li><label class="registro__label">Ingrese una descripción:</label></li>
+							<li><textarea class="registro__textarea" id="" cols="63" rows="10"></textarea></li>
+							<li><label class="registro__label">Seleccione imagenes:</label></li>
+							<li><input type="file" class="registro__file"></li>
+							<li><label class="registro__label">Marque el punto donde la allo:</label></li>
+							<div id="map"></div>
+							<li><input type="submit" class="boton-submit" value="Notificar sobre mascota encontrada"></li>
+						</ul>
+					</form>
+				</div>
+			</div>
 		</section>
 		<footer>
 				<div class="footer">
@@ -88,9 +123,9 @@
 					<div class="footer__contacto">
 						<h5>Contacto:</h5>
 						<div class="footer__contacto__contenido">
-							<h6>Móvil 1: +54 011 9999-9999</h6>
+							<h6>Móvil 1: +54 011 3323-5987</h6>
 							<h6>Móvil 2: +54 011 8888-8888</h6>
-							<h6>Mail: info@lasercom.com.ar</h6>
+							<h6>Mail: francobuccellato@gmail.com</h6>
 						</div>
 					</div>
 					<div class="footer__redes">
@@ -118,8 +153,10 @@
 					</div>
 				</div>
 			<div class="copyright">
-				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a DDS2021</p>
+				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a Franco Buccellato</p>
 			</div>
 		</footer>
+		<script src="mapa.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1sWIITVu8DSa3MUBIG0uOUlomrmDmut0&callback=iniciarMap"></script>
 	</body>
 </html>

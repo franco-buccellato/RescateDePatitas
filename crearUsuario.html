@@ -5,7 +5,6 @@
 		Rescate de Patitas
 	</title>
 	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link rel="stylesheet" type="text/css" href="css/estilo-log.css">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="icon" href="imagenes/icono-principal.png">
 	<meta charset="utf-8">
@@ -29,6 +28,7 @@
 		<header id="principio">
 			<div class="encabezado">
 				<a href="index.html"><img class="logo-inicio" src="imagenes/icono-principal.png"></img></a>
+				<h1>Rescate de Patitas</h1>
 			</div>
 			<nav class="menu">
 				<ul class="menu__menu">
@@ -66,20 +66,52 @@
 				</ul>
 			</nav>
 		</header>
-		<section class="section-login">
+		<section class="section-creacion-usuario">
 			<div class="container__regsitro">
 				<div class="registro">
-					<h2>Inicio de Sesion:</h2>
+					<h3>Complete los siguientes datos para crear su usuario:</h3>
 					<form>
 						<ul>
+							<li><label class="registro__label">Ingrese su nombre:</label></li>
+							<li><input type="text" class="registro__input"></li>
+							<li><label class="registro__label">Ingrese su apellido:</label></li>
+							<li><input type="text" class="registro__input"></li>
+							<li><label class="registro__label">Ingrese su mail:</label></li>
+							<li><input type="mail" class="registro__input"></li>
+							<li><label class="registro__label">Ingrese su edad:</label></li>
+							<li><input type="text" class="registro__input"></li>
+							<li><label class="registro__label">Seleccione el sexo:</label></li>
+							<li>
+								<select name="sexo" class="registro__input">
+									<option>Seleccione el sexo correspondiente</option> 
+									<option value="M">Masculino</option> 
+									<option value="F">Femenino</option>
+									<option value="NC">No Contesta</option> 
+								</select>
+							</li>
+							<li><label class="registro__label">Seleccione tipo documentacion:</label></li>
+							<li>
+								<select name="especie" class="registro__input">
+									<option>Seleccione el tipo de documentacion correspondiente</option> 
+									<option value="DNI">DNI</option> 
+									<option value="PASAPORTE">Pasaporte</option>
+								</select>
+							</li>
+							<li><label class="registro__label">Ingrese su numero de identificacion:</label></li>
+							<li><input type="text" class="registro__input"></li>
+							<li><label class="registro__label">Ingrese su direccion:</label></li>
+							<li><input type="text" class="registro__input"></li>
+							<li><label class="registro__label">Ingrese su telefono:</label></li>
+							<li><input type="text" class="registro__input"></li>
 							<li><label class="registro__label">Ingrese su nombre de usuario:</label></li>
 							<li><input type="text" class="registro__input"></li>
 							<li><label class="registro__label">Ingrese su contraseña:</label></li>
 							<li><input type="password" class="registro__input"></li>
-							<li><input type="submit" class="boton-submit" value="Iniciar Sesión"></li>
+							<li><label class="registro__label">Repita su contraseña:</label></li>
+							<li><input type="password" class="registro__input"></li>
+							<li><input type="submit" class="boton-submit" value="Registrarme"></li>
 						</ul>
 					</form>
-					<a href="crearUsuario.html">Si no se encuentra registrado ¡Hacer Click Aqui! </a>
 				</div>
 			</div>
 		</section>
@@ -96,9 +128,9 @@
 					<div class="footer__contacto">
 						<h5>Contacto:</h5>
 						<div class="footer__contacto__contenido">
-							<h6>Móvil 1: +54 011 9999-9999</h6>
+							<h6>Móvil 1: +54 011 3323-5987</h6>
 							<h6>Móvil 2: +54 011 8888-8888</h6>
-							<h6>Mail: info@lasercom.com.ar</h6>
+							<h6>Mail: francobuccellato@gmail.com</h6>
 						</div>
 					</div>
 					<div class="footer__redes">
