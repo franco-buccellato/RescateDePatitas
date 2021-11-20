@@ -1,7 +1,8 @@
-import Usuario from "RescateDePatitas\js\Usuario.js"
+import { Sexo } from "../enums/Sexo.js";
+import { TipoDocumento } from "../enums/TipoDocumento.js";
+import {Usuario} from "./Usuario.js"
 
-class Duenio {
-
+export class Duenio {
     constructor(
         nombreUsuario,
         contrasenioUsuario,
@@ -9,6 +10,7 @@ class Duenio {
         nombre,
         apellido,
         edad,
+        sexo,
         tipoDocumento,
         numeroDocumento,
         direccion,
@@ -18,16 +20,16 @@ class Duenio {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.tipoDocumento = tipoDocumento;
+        this.sexo = Sexo[sexo];
+        this.tipoDocumento = TipoDocumento[tipoDocumento];
         this.numeroDocumento = numeroDocumento;
         this.direccion = direccion;
         this.mail = mail;
         this.telefono  = telefono;
-        this.mascotas = new Set();
+        this.mascotas = new Array();
     }
 
     agregarMascota(mascota) {
         this.mascotas.add(mascota);
     }
-
 }

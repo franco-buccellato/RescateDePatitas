@@ -9,9 +9,7 @@ import {Usuario} from "./clases/Usuario.js"
 let duenioActual;
 let dueniosRegistrados;
 
-document.getElementById('boton-registrar-usuario').addEventListener('click', registrarUsuario);
-
-//main();
+main();
 
 function main() {
     localStorage.setItem('duenios', JSON.stringify(
@@ -51,47 +49,10 @@ function cargarDuenioAdmin() {
     console.log("Cargue Duenio Admin.");
 }
 
-function validarUsuario() {
-    console.log("Validando usuario....");
-    let usuario = document.getElementById('usuario-logueo').value;
-    console.log("El usuario ingresado es: " + usuario);
-    let contrasenia = document.getElementById('contrasenia-logueo').value;
-    console.log("La contraseña ingresada es: " + contrasenia);
-    if(usuario != "") {
-        if(contrasenia != "") {
-            dueniosRegistrados = localStorage.getItem('duenios');
-            dueniosRegistrados = JSON.parse(dueniosRegistrados);
-            duenioActual = dueniosRegistrados.find(
-                unDuenio =>
-                unDuenio.usuario.usuario === usuario &
-                unDuenio.usuario.contrasenia === contrasenia
-            );
-            if(
-                duenioActual != null
-            ) {
-                console.log("Usuario y Contraseña Validado.");
-
-                localStorage.setItem('duenioActual', JSON.stringify(duenioActual));
-                
-                //Redirecciono a Inicio
-                window.location.href = "index.html";
-
-            } else {
-                console.log("Usuario o contraseña Incorrecto.")
-            }
-        } else {
-            console.log("Ingrese una contraseña.");
-            return false; 
-        }
-    } else {
-        console.log("Ingrese nombre usuario.");
-        return false;
-    }
-}
-
 function agregarNuevoDuenio(nuevoDuenio) {
     let listadoDuenios = localStorage.getItem('duenios');
     listadoDuenios = JSON.parse(listadoDuenios);
+    console.log(listadoDuenios);
     listadoDuenios.push(nuevoDuenio);
     console.log("Dueño agregado.");
     localStorage.setItem('duenios', JSON.stringify(listadoDuenios));

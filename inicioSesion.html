@@ -25,7 +25,7 @@
 	<script src="https://kit.fontawesome.com/a2beca5d14.js" crossorigin="anonymous"></script>
 
 </head>
-	<body onload="main()">
+	<body>
 		<header id="principio">
 			<div class="encabezado">
 				<a href="index.html"><img class="logo-inicio" src="imagenes/icono-principal.png"></img></a>
@@ -35,12 +35,12 @@
 					<li class="menu__menu__li"><i class="fas fa-home"></i>
 						<a href="index.html"><h3>Inicio</h3></a>
 					</li>
-					<li class="menu__menu__li"><i class="fas fa-paw"></i>
+<!-- 					<li class="menu__menu__li"><i class="fas fa-paw"></i>
 						<a href="registrarMascota.html"><h3>Registrar mi Mascota</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-paw"></i>
 						<a href="encontreMascota.html"><h3>Encontre una Mascota</h3></a>
-					</li>
+					</li> -->
 					<li class="menu__menu__li"><i class="fas fa-sign-in-alt"></i>
 						<a href="inicioSesion.html"><h3>Iniciar Sesión</h3></a>
 					</li>
@@ -53,12 +53,14 @@
 						<li class="menu__responsive__div__li"><i class="fas fa-home"></i>
 							<a href="index.html"><h2>Inicio</h2></a>
 						</li>
-						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
+						<li id="sesion-iniciada-regsitro-mascota"></li>
+						<li id="sesion-iniciada-encontre-mascota"></li>
+<!-- 						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
 							<a href="registrarMascota.html"><h2>Registrar Mascota</h2></a>
 						</li>
 						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
 							<a href="encontreMascota.html"><h2>Encontré Mascota</h2></a>
-						</li>
+						</li> -->
 						<li class="menu__responsive__div__li"><i class="fas fa-sign-in-alt"></i>
 							<a href="inicioSesion.html"><h2>Iniciar Sesión</h2></a>
 						</li>
@@ -70,13 +72,13 @@
 			<div class="container__regsitro">
 				<div class="registro">
 					<h2>Inicio de Sesion:</h2>
-					<form action="index.html">
+					<form id="form-inicio-sesion">
 						<ul>
 							<li><label class="registro__label">Ingrese su nombre de usuario:</label></li>
 							<li><input type="text" class="registro__input" id="usuario-logueo" required></li>
 							<li><label class="registro__label">Ingrese su contraseña:</label></li>
-							<li><input type="password" class="registro__input" id="contrasenia-logueo" required></li>
-							<li><input type="button" class="boton-submit" value="Iniciar Sesión" onclick="validarUsuario()"></li>
+							<li><input type="password" class="registro__input" id="contrasenia-logueo" required minlength="4"></li>
+							<li><input type="button" class="boton-submit" value="Iniciar Sesión" id="boton-inicio-sesion"></li>
 						</ul>
 					</form>
 					<a href="crearUsuario.html">Si no se encuentra registrado ¡Hacer Click Aqui! </a>
@@ -129,6 +131,6 @@
 				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a DDS2021</p>
 			</div>
 		</footer>
-		<script src="js/main.js"></script>
+		<script src="js/inicioSesion.js" type="module"></script>
 	</body>
 </html>

@@ -1,5 +1,4 @@
-class Mascota {
-
+export class Mascota {
     constructor ( 
         tipoMascota,
         nombre,
@@ -21,5 +20,4 @@ class Mascota {
         this.fotos = fotos;
         this.estado = estado;
     }
-
 }

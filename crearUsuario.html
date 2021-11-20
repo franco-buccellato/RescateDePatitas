@@ -35,12 +35,12 @@
 					<li class="menu__menu__li"><i class="fas fa-home"></i>
 						<a href="index.html"><h3>Inicio</h3></a>
 					</li>
-					<li class="menu__menu__li"><i class="fas fa-paw"></i>
+<!-- 					<li class="menu__menu__li"><i class="fas fa-paw"></i>
 						<a href="registrarMascota.html"><h3>Registrar mi Mascota</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-paw"></i>
 						<a href="encontreMascota.html"><h3>Encontre una Mascota</h3></a>
-					</li>
+					</li> -->
 					<li class="menu__menu__li"><i class="fas fa-sign-in-alt"></i>
 						<a href="inicioSesion.html"><h3>Iniciar Sesión</h3></a>
 					</li>
@@ -53,12 +53,12 @@
 						<li class="menu__responsive__div__li"><i class="fas fa-home"></i>
 							<a href="index.html"><h2>Inicio</h2></a>
 						</li>
-						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
+<!-- 						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
 							<a href="registrarMascota.html"><h2>Registrar Mascota</h2></a>
 						</li>
 						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
 							<a href="encontreMascota.html"><h2>Encontré Mascota</h2></a>
-						</li>
+						</li> -->
 						<li class="menu__responsive__div__li"><i class="fas fa-sign-in-alt"></i>
 							<a href="inicioSesion.html"><h2>Iniciar Sesión</h2></a>
 						</li>
@@ -86,7 +86,7 @@
 									<option>Seleccione el sexo correspondiente</option> 
 									<option value="M">Masculino</option> 
 									<option value="F">Femenino</option>
-									<option value="NC">No Contesta</option> 
+									<option value="I">No Contesta</option> 
 								</select>
 							</li>
 							<li><label class="registro__label">Seleccione tipo documentacion:</label></li>
@@ -109,7 +109,7 @@
 							<li><input type="password" class="registro__input" id="creacion-contrasenia1" required></li>
 							<li><label class="registro__label">Repita su contraseña:</label></li>
 							<li><input type="password" class="registro__input" id="creacion-contrasenia2" required></li>
-							<li><input type="button" class="boton-submit" value="Registrarme" onclick="registrarUsuario()"></li>
+							<li><input type="button" id="boton-registrar-usuario" class="boton-submit" value="Registrarme"></li>
 						</ul>
 					</form>
 				</div>
@@ -161,6 +161,6 @@
 				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a DDS2021</p>
 			</div>
 		</footer>
-		<script src="js/main.js"></script>
+		<script src="js/creacionUsuario.js" type="module"></script>
 	</body>
 </html>
