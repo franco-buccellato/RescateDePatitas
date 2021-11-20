@@ -1,4 +1,4 @@
-import { Sexo } from "../enums/Sexo.js";
+import { Genero } from "../enums/Genero.js";
 import { TipoDocumento } from "../enums/TipoDocumento.js";
 import {Usuario} from "./Usuario.js"
 
@@ -10,7 +10,7 @@ export class Duenio {
         nombre,
         apellido,
         edad,
-        sexo,
+        genero,
         tipoDocumento,
         numeroDocumento,
         direccion,
@@ -20,7 +20,7 @@ export class Duenio {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.sexo = Sexo[sexo];
+        this.sexo = Genero[genero];
         this.tipoDocumento = TipoDocumento[tipoDocumento];
         this.numeroDocumento = numeroDocumento;
         this.direccion = direccion;

@@ -1,11 +1,3 @@
-import {Estado} from "./enums/Estado.js"
-import {Sexo} from "./enums/Sexo.js"
-import {TipoMascota} from "./enums/TipoMascota.js"
-import {TipoDocumento} from "./enums/TipoDocumento.js"
-import {Duenio} from "./clases/Duenio.js"
-import {Mascota} from "./clases/Mascota.js"
-import {Usuario} from "./clases/Usuario.js"
-
 let duenioActual;
 let dueniosRegistrados;
 
@@ -28,16 +20,11 @@ function validarUsuario() {
                 unDuenio.usuario.usuario === usuario &
                 unDuenio.usuario.contrasenia === contrasenia
             );
-            if(
-                duenioActual != null
-            ) {
+            if(duenioActual != null) {
                 console.log("Usuario y Contraseña Validado.");
-
                 localStorage.setItem('duenioActual', JSON.stringify(duenioActual));
-                
                 //Redirecciono a Inicio2
                 window.location.href = "index2.html";
-
             } else {
                 console.log("Usuario o contraseña Incorrecto.")
             }

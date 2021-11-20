@@ -1,23 +1,27 @@
+import { Especie } from "../enums/Especie.js";
+import { Sexo } from "../enums/Sexo.js";
+import { Estado } from "../enums/Estado.js";
+
 export class Mascota {
     constructor ( 
-        tipoMascota,
+        especie,
         nombre,
         apodo,
-        edadAproximada,
+        edad,
         sexo,
         raza,
-        descripcionFisica,
+        descripcion,
         fotos,
         estado
     ) {
-        this.tipoMascota = tipoMascota;
+        this.especie = Especie[especie];
         this.nombre = nombre;
         this.apodo = apodo;
-        this.edadAproximada = edadAproximada;
-        this.sexo = sexo;
+        this.edad = edad;
+        this.sexo = Sexo[sexo];
         this.raza = raza;
-        this.descripcionFisica = descripcionFisica;
+        this.descripcion = descripcion;
         this.fotos = fotos;
-        this.estado = estado;
+        this.estado = Estado[estado];
     }
 }

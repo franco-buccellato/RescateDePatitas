@@ -1,5 +1,5 @@
 export const Sexo = {
-    MASCULINO: "M",
-    FEMENINO: "F",
-    INDETERMINADO: "I"
+    MACHO: "Macho",
+    HEMBRA: "Hembra",
+    INDETERMINADO: "Indeterminado"
 }

@@ -1,10 +1,5 @@
 import {Estado} from "./enums/Estado.js"
-import {Sexo} from "./enums/Sexo.js"
-import {TipoMascota} from "./enums/TipoMascota.js"
-import {TipoDocumento} from "./enums/TipoDocumento.js"
-import {Duenio} from "./clases/Duenio.js"
 import {Mascota} from "./clases/Mascota.js"
-import {Usuario} from "./clases/Usuario.js"
 
 document.getElementById('boton-registrar-mascota').addEventListener('click', registrarMascota);
 
@@ -19,7 +14,17 @@ function registrarMascota() {
     let fotos = document.getElementById('registro-fotos').value;
     let nuevaMascota, duenioActual;
     if(validacionCamposParaRegistroMascota(nombre, apodo, edad, sexo, especie, raza, descripcion, fotos) === true) {
-        nuevaMascota = new Mascota(especie, nombre, apodo, edad, sexo, raza, descripcion, fotos, Estado.REGISTRADO);
+        nuevaMascota = new Mascota(
+            especie,
+            nombre,
+            apodo,
+            edad,
+            sexo,
+            raza,
+            descripcion,
+            fotos,
+            Estado.REGISTRADO
+        );
         duenioActual = localStorage.getItem('duenioActual');
         console.log(duenioActual);
         duenioActual = JSON.parse(duenioActual);
@@ -29,7 +34,6 @@ function registrarMascota() {
         for(let i=0; i < listadoDuenios.length;  i++) {
             if(listadoDuenios[i].usuario.usuario === duenioActual.usuario.usuario) {
                 console.log(listadoDuenios[i]);
-                //listadoDuenios[i].agregarMascota(nuevaMascota);
                 listadoDuenios[i].mascotas.push(nuevaMascota);
                 localStorage.setItem('duenios', JSON.stringify(listadoDuenios));
                 console.log('Se agrego la mascota correctamente.');
@@ -58,5 +62,29 @@ function validacionCamposParaRegistroMascota(nombre, apodo, edad, sexo, especie,
 }
 
 function mostrarMascotaCargada(nuevaMascota) {
-    document.querySelector('section-registrar')
+    let tarjetaMascota = document.createElement('div');
+    tarjetaMascota.innerHTML =
+        `<div id="informacion">
+            <div class="container-informacion-mascota">
+                <div class="card" style="width: 18rem;">
+                    <img src="imagenes\socio1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${nuevaMascota.nombre}</h5>
+                        <p class="card-text">${nuevaMascota.apodo}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Edad: ${nuevaMascota.edad}</li>
+                        <li class="list-group-item">Especie: ${nuevaMascota.especie}</li>
+                        <li class="list-group-item">Raza: ${nuevaMascota.raza}</li>
+                        <li class="list-group-item">Descripcion: ${nuevaMascota.descripcion}</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="registrarMascota.html" class="card-link">Registrar nueva Mascota</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `
+    ;
+    document.querySelector('.registro').replaceWith(tarjetaMascota);
 }

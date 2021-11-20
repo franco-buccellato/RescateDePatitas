@@ -22,7 +22,8 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/a2beca5d14.js" crossorigin="anonymous"></script>
-
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </head>
 	<body>
 		<header id="principio">
@@ -33,7 +34,7 @@
 			<nav class="menu">
 				<ul class="menu__menu">
 					<li class="menu__menu__li"><i class="fas fa-home"></i>
-						<a href="index.html"><h3>Inicio</h3></a>
+						<a href="index2.html"><h3>Inicio</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-paw"></i>
 						<a href="registrarMascota.html"><h3>Registrar mi Mascota</h3></a>
@@ -42,7 +43,7 @@
 						<a href="encontreMascota.html"><h3>Encontre una Mascota</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-sign-in-alt"></i>
-						<a href="inicioSesion.html"><h3>Iniciar Sesión</h3></a>
+						<a href="index.html" id="boton-cierre-sesion"><h3>Cerrar Sesión</h3></a>
 					</li>
 				</ul>
 				<ul class="menu__responsive">
@@ -51,7 +52,7 @@
 					</div>
 					<div class="menu__responsive__div">
 						<li class="menu__responsive__div__li"><i class="fas fa-home"></i>
-							<a href="index.html"><h2>Inicio</h2></a>
+							<a href="index2.html"><h2>Inicio</h2></a>
 						</li>
 						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
 							<a href="registrarMascota.html"><h2>Registrar Mascota</h2></a>
@@ -60,7 +61,7 @@
 							<a href="encontreMascota.html"><h2>Encontré Mascota</h2></a>
 						</li>
 						<li class="menu__responsive__div__li"><i class="fas fa-sign-in-alt"></i>
-							<a href="inicioSesion.html"><h2>Iniciar Sesión</h2></a>
+							<a href="index.html" id="boton-cierre-sesion"><h2>Cerrar Sesión</h2></a>
 						</li>
 					</div>
 				</ul>
@@ -82,25 +83,25 @@
 							<li>
 								<select name="sexo" class="registro__input" id="registro-sexo">
 									<option>Seleccione el sexo correspondiente</option> 
-									<option value="M">Macho</option> 
-									<option value="H">Hembra</option>
-									<option value="I">Indefinido</option> 
+									<option value="Macho">Macho</option> 
+									<option value="Hembra">Hembra</option>
+									<option value="Indeterminado">Indefinido</option> 
 								</select>
 							</li>
 							<li><label class="registro__label">Seleccione la especie:</label></li>
 							<li>
 								<select name="especie" class="registro__input" id="registro-especie">
 									<option>Seleccione la especie correspondiente</option> 
-									<option value="P">Perro</option> 
-									<option value="G">Gato</option>
+									<option value="Perro">Perro</option> 
+									<option value="Gato">Gato</option>
 								</select>
 							</li>
 							<li><label class="registro__label">Seleccione la raza:</label></li>
 							<li>
 								<select name="raza" class="registro__input" id="registro-raza">
 									<option>Seleccione la raza correspondiente</option> 
-									<option value="P">Perro</option> 
-									<option value="G">Gato</option>
+									<option value="Perro">Perro</option> 
+									<option value="Gato">Gato</option>
 								</select>
 							</li>
 							<li><label class="registro__label">Ingrese una descripción:</label></li>
@@ -160,5 +161,6 @@
 			</div>
 		</footer>
 		<script src="js/registroMascota.js" type="module"></script>
+		<script src="js/cierreSesion.js" type="module"></script>
 	</body>
 </html>
