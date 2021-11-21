@@ -30,6 +30,6 @@ export class Duenio {
     }
 
     agregarMascota(mascota) {
-        this.mascotas.add(mascota);
+        this.mascotas.push(mascota);
     }
 }
