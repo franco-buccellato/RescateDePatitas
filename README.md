@@ -12,3 +12,6 @@ Entrega 2:
 -Si no estas logueado no te muestra todas las pantallas; solo te deja iniciar sesión o crear un usuario. (El usuario que carga por defecto es admin admin ya que mas adelante podra tener mas funcionalidades).
 -Una vez logueado te muestra las opciones de Registrar una Mascota, la misa te la agrega la localStorage y te muestra los detalles de la mascota creada.
 -Permite cerrar sesión.
+
+##Diagramas
+![diagrama_de_clases](https://github.com/franco-buccellato/RescateDePatitas/blob/main/Diagrama%20de%20Clases.png)
