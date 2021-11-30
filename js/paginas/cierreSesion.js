@@ -1,4 +1,5 @@
-document.getElementById('boton-cierre-sesion').addEventListener('click', cerrarSesion);
+//document.getElementById('boton-cierre-sesion').addEventListener('click', cerrarSesion);
+$('#boton-cierre-sesion').click( () => cerrarSesion());
 
 function cerrarSesion() {
     console.log("Cerrando sesion....");

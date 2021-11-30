@@ -4,9 +4,10 @@
 	<title>
 		Rescate de Patitas
 	</title>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="icon" href="imagenes/icono-principal.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="../css/estilo-log.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="icon" href="../imagenes/icono-principal.png">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Mascotas, Gato, Perro, Mascota perdida, adopción">
 	<meta name="description" content="Gestión de Mascotas perdidas, encontradas o propias">
@@ -27,13 +28,15 @@
 	<body>
 		<header id="principio">
 			<div class="encabezado">
-				<a href="index.html"><img class="logo-inicio" src="imagenes/icono-principal.png"></img></a>
-				<h1>Rescate de Patitas</h1>
+				<a href="../index.html"><img class="logo-inicio" src="../imagenes/icono-principal.png"></img></a>
+				<h1>
+					Rescate de Patitas.
+				</h1>
 			</div>
 			<nav class="menu">
 				<ul class="menu__menu">
 					<li class="menu__menu__li"><i class="fas fa-home"></i>
-						<a href="index.html"><h3>Inicio</h3></a>
+						<a href="../index.html"><h3>Inicio</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-sign-in-alt"></i>
 						<a href="inicioSesion.html"><h3>Iniciar Sesión</h3></a>
@@ -45,8 +48,10 @@
 					</div>
 					<div class="menu__responsive__div">
 						<li class="menu__responsive__div__li"><i class="fas fa-home"></i>
-							<a href="index.html"><h2>Inicio</h2></a>
+							<a href="../index.html"><h2>Inicio</h2></a>
 						</li>
+						<li id="sesion-iniciada-regsitro-mascota"></li>
+						<li id="sesion-iniciada-encontre-mascota"></li>
 						<li class="menu__responsive__div__li"><i class="fas fa-sign-in-alt"></i>
 							<a href="inicioSesion.html"><h2>Iniciar Sesión</h2></a>
 						</li>
@@ -54,60 +59,27 @@
 				</ul>
 			</nav>
 		</header>
-		<section class="section-creacion-usuario">
+		<section class="section-login">
 			<div class="container__regsitro">
 				<div class="registro">
-					<h3>Complete los siguientes datos para crear su usuario:</h3>
-					<form>
+					<h2>Inicio de Sesion:</h2>
+					<form id="form-inicio-sesion">
 						<ul>
-							<li><label class="registro__label">Ingrese su nombre:</label></li>
-							<li><input type="text" class="registro__input" id="creacion-nombre" required></li>
-							<li><label class="registro__label">Ingrese su apellido:</label></li>
-							<li><input type="text" class="registro__input" id="creacion-apellido" required></li>
-							<li><label class="registro__label">Ingrese su mail:</label></li>
-							<li><input type="mail" class="registro__input" id="creacion-mail" required></li>
-							<li><label class="registro__label">Ingrese su edad:</label></li>
-							<li><input type="text" class="registro__input" id="creacion-edad" required></li>
-							<li><label class="registro__label">Seleccione el sexo:</label></li>
-							<li>
-								<select name="sexo" class="registro__input" id="creacion-sexo" required>
-									<option>Seleccione el sexo correspondiente</option> 
-									<option value="Masculino">Masculino</option> 
-									<option value="Femenino">Femenino</option>
-									<option value="No Binario">No Binario</option> 
-									<option value="No Contesta">No Contesta</option> 
-								</select>
-							</li>
-							<li><label class="registro__label">Seleccione tipo documentacion:</label></li>
-							<li>
-								<select name="especie" class="registro__input" id="creacion-tipo-documento" required>
-									<option>Seleccione el tipo de documentacion correspondiente</option> 
-									<option value="DNI">DNI</option> 
-									<option value="PASAPORTE">Pasaporte</option>
-								</select>
-							</li>
-							<li><label class="registro__label">Ingrese su numero de identificacion:</label></li>
-							<li><input type="text" class="registro__input" id="creacion-numero-documento" required></li>
-							<li><label class="registro__label">Ingrese su direccion:</label></li>
-							<li><input type="text" class="registro__input" id="creacion-direccion" required></li>
-							<li><label class="registro__label">Ingrese su telefono:</label></li>
-							<li><input type="text" class="registro__input" id="creacion-telefono" required></li>
 							<li><label class="registro__label">Ingrese su nombre de usuario:</label></li>
-							<li><input type="text" class="registro__input" id="creacion-usuario" required></li>
+							<li><input type="text" class="registro__input" id="usuario-logueo" required></li>
 							<li><label class="registro__label">Ingrese su contraseña:</label></li>
-							<li><input type="password" class="registro__input" id="creacion-contrasenia1" required></li>
-							<li><label class="registro__label">Repita su contraseña:</label></li>
-							<li><input type="password" class="registro__input" id="creacion-contrasenia2" required></li>
-							<li><input type="button" id="boton-registrar-usuario" class="boton-submit" value="Registrarme"></li>
+							<li><input type="password" class="registro__input" id="contrasenia-logueo" required minlength="4"></li>
+							<li><input type="button" class="boton-submit" value="Iniciar Sesión" id="boton-inicio-sesion"></li>
 						</ul>
 					</form>
+					<a href="crearUsuario.html">Si no se encuentra registrado ¡Hacer Click Aqui! </a>
 				</div>
 			</div>
 		</section>
 		<footer>
 				<div class="footer">
 					<div class="footer__ubicacion">
-						<img src="imagenes/icono-principal.png" height="50px">
+						<img src="../imagenes/icono-principal.png" height="50px">
 						<div class="footer__ubicacion__contenido">	
 							<h6>Direccion de Prueba 123</h6>
 							<h6>Ciudad Autónoma de Bs.As.</h6>
@@ -117,9 +89,9 @@
 					<div class="footer__contacto">
 						<h5>Contacto:</h5>
 						<div class="footer__contacto__contenido">
-							<h6>Móvil 1: +54 011 3323-5987</h6>
+							<h6>Móvil 1: +54 011 9999-9999</h6>
 							<h6>Móvil 2: +54 011 8888-8888</h6>
-							<h6>Mail: francobuccellato@gmail.com</h6>
+							<h6>Mail: info@lasercom.com.ar</h6>
 						</div>
 					</div>
 					<div class="footer__redes">
@@ -127,19 +99,19 @@
 						<div class="footer__redes__contenido">
 							<div>
 								<a href="https://www.facebook.com/" target="_BLANK">
-									<img src="imagenes/facebook.png">
+									<img src="../imagenes/facebook.png">
 								</a>
 								<a href="https://www.facebook.com/" target="_BLANK"><h6 class="boton_redes">Facebook</h6></a>
 							</div>
 							<div>
 								<a href="https://www.instagram.com/" target="_BLANK">
-									<img src="imagenes/instagram.png">
+									<img src="../imagenes/instagram.png">
 								</a>
 								<a href="https://www.instagram.com/" target="_BLANK"><h6 class="boton_redes">Instagram</h6></a>
 							</div>
 							<div>
 								<a href="https://mercadolibre.com.ar" target="_BLANK">
-									<img src="imagenes/carrito.jpg">
+									<img src="../imagenes/carrito.jpg">
 								</a>
 								<a href="https://mercadolibre.com.ar" target="_BLANK"><h6 class="boton_redes">Tienda Online</h6></a>
 							</div>
@@ -150,6 +122,12 @@
 				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a DDS2021</p>
 			</div>
 		</footer>
-		<script src="js/creacionUsuario.js" type="module"></script>
+		<script src="../js\paginas\inicioSesion.js" type="module"></script>
+		<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    	></script>
 	</body>
 </html>

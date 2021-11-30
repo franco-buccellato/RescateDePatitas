@@ -1,7 +1,8 @@
 let duenioActual;
 let dueniosRegistrados;
 
-document.getElementById('boton-inicio-sesion').addEventListener('click', validarUsuario);
+//document.getElementById('boton-inicio-sesion').addEventListener('click', validarUsuario);
+$('#boton-inicio-sesion').click( () => validarUsuario());
 
 
 function validarUsuario() {
@@ -37,3 +38,10 @@ function validarUsuario() {
         return false;
     }
 }
+
+
+
+
+
+
+

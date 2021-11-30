@@ -2,7 +2,8 @@ import {Estado} from "./enums/Estado.js"
 import {Mascota} from "./clases/Mascota.js"
 import { Duenio } from "./clases/Duenio.js";
 
-document.getElementById('boton-registrar-mascota').addEventListener('click', registrarMascota);
+//document.getElementById('boton-registrar-mascota').addEventListener('click', registrarMascota);
+$('#boton-registrar-mascota').click( () => registrarMascota());
 
 function registrarMascota() {
     let nombre = document.getElementById('registro-nombre').value;

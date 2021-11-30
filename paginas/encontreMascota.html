@@ -4,9 +4,9 @@
 	<title>
 		Rescate de Patitas
 	</title>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="icon" href="imagenes/icono-principal.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="icon" href="../imagenes/icono-principal.png">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Mascotas, Gato, Perro, Mascota perdida, adopción">
 	<meta name="description" content="Gestión de Mascotas perdidas, encontradas o propias">
@@ -22,14 +22,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/a2beca5d14.js" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 </head>
 	<body>
 		<header id="principio">
 			<div class="encabezado">
-				<a href="index.html"><img class="logo-inicio" src="imagenes/icono-principal.png"></img></a>
-				<h1>Rescate de Patitas</h1>
+				<a href="index2.html"><img class="logo-inicio" src="../imagenes/icono-principal.png"></img></a>
 			</div>
 			<nav class="menu">
 				<ul class="menu__menu">
@@ -43,7 +41,7 @@
 						<a href="encontreMascota.html"><h3>Encontre una Mascota</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-sign-in-alt"></i>
-						<a href="index.html" id="boton-cierre-sesion"><h3>Cerrar Sesión</h3></a>
+						<a href="../index.html"><h3>Cerrar Sesión</h3></a>
 					</li>
 				</ul>
 				<ul class="menu__responsive">
@@ -61,54 +59,52 @@
 							<a href="encontreMascota.html"><h2>Encontré Mascota</h2></a>
 						</li>
 						<li class="menu__responsive__div__li"><i class="fas fa-sign-in-alt"></i>
-							<a href="index.html" id="boton-cierre-sesion"><h2>Cerrar Sesión</h2></a>
+							<a href="../index.html"><h2>Cerrar Sesión</h2></a>
 						</li>
 					</div>
 				</ul>
 			</nav>
 		</header>
-		<section class="section-registrar">
+		<section class="section-encontre">
 			<div class="container__regsitro">
 				<div class="registro">
-					<h3>Complete los siguientes datos de su mascota:</h3>
+					<h3>Complete los siguientes datos de la mascota que encontro:</h3>
 					<form>
 						<ul>
-							<li><label class="registro__label">Ingrese el nombre:</label></li>
-							<li><input type="text" class="registro__input" id="registro-nombre"></li>
-							<li><label class="registro__label">Ingrese el apodo:</label></li>
-							<li><input type="text" class="registro__input" id="registro-apodo"></li>
-							<li><label class="registro__label">Ingrese la edad:</label></li>
-							<li><input type="text" class="registro__input" id="registro-edad"></li>
+							<li><label class="registro__label">Ingrese la edad estimada:</label></li>
+							<li><input type="text" class="registro__input"></li>
 							<li><label class="registro__label">Seleccione el sexo:</label></li>
 							<li>
-								<select name="sexo" class="registro__input" id="registro-sexo">
+								<select name="sexo" class="registro__input">
 									<option>Seleccione el sexo correspondiente</option> 
-									<option value="Macho">Macho</option> 
-									<option value="Hembra">Hembra</option>
-									<option value="Indeterminado">Indefinido</option> 
+									<option value="M">Macho</option> 
+									<option value="H">Hembra</option>
+									<option value="I">Indefinido</option> 
 								</select>
 							</li>
 							<li><label class="registro__label">Seleccione la especie:</label></li>
 							<li>
-								<select name="especie" class="registro__input" id="registro-especie">
+								<select name="especie" class="registro__input">
 									<option>Seleccione la especie correspondiente</option> 
-									<option value="Perro">Perro</option> 
-									<option value="Gato">Gato</option>
+									<option value="P">Perro</option> 
+									<option value="G">Gato</option>
 								</select>
 							</li>
 							<li><label class="registro__label">Seleccione la raza:</label></li>
 							<li>
-								<select name="raza" class="registro__input" id="registro-raza">
+								<select name="raza" class="registro__input">
 									<option>Seleccione la raza correspondiente</option> 
-									<option value="Perro">Perro</option> 
-									<option value="Gato">Gato</option>
+									<option value="P">Perro</option> 
+									<option value="G">Gato</option>
 								</select>
 							</li>
 							<li><label class="registro__label">Ingrese una descripción:</label></li>
-							<li><textarea class="registro__textarea" id="registro-descripcion" cols="63" rows="10"></textarea></li>
+							<li><textarea class="registro__textarea" id="" cols="63" rows="10"></textarea></li>
 							<li><label class="registro__label">Seleccione imagenes:</label></li>
-							<li><input type="file" class="registro__file" id="registro-fotos"></li>
-							<li><input type="button" class="boton-submit" value="Registrar Mascota" id="boton-registrar-mascota"></li>
+							<li><input type="file" class="registro__file"></li>
+							<li><label class="registro__label">Marque el punto donde la allo:</label></li>
+							<div class="mapa" id="map"></div>
+							<li><input type="submit" class="boton-submit" value="Notificar sobre mascota encontrada"></li>
 						</ul>
 					</form>
 				</div>
@@ -117,7 +113,7 @@
 		<footer>
 				<div class="footer">
 					<div class="footer__ubicacion">
-						<img src="imagenes/icono-principal.png" height="50px">
+						<img src="../imagenes/icono-principal.png" height="50px">
 						<div class="footer__ubicacion__contenido">	
 							<h6>Direccion de Prueba 123</h6>
 							<h6>Ciudad Autónoma de Bs.As.</h6>
@@ -137,19 +133,19 @@
 						<div class="footer__redes__contenido">
 							<div>
 								<a href="https://www.facebook.com/" target="_BLANK">
-									<img src="imagenes/facebook.png">
+									<img src="../imagenes/facebook.png">
 								</a>
 								<a href="https://www.facebook.com/" target="_BLANK"><h6 class="boton_redes">Facebook</h6></a>
 							</div>
 							<div>
 								<a href="https://www.instagram.com/" target="_BLANK">
-									<img src="imagenes/instagram.png">
+									<img src="../imagenes/instagram.png">
 								</a>
 								<a href="https://www.instagram.com/" target="_BLANK"><h6 class="boton_redes">Instagram</h6></a>
 							</div>
 							<div>
 								<a href="https://mercadolibre.com.ar" target="_BLANK">
-									<img src="imagenes/carrito.jpg">
+									<img src="../imagenes/carrito.jpg">
 								</a>
 								<a href="https://mercadolibre.com.ar" target="_BLANK"><h6 class="boton_redes">Tienda Online</h6></a>
 							</div>
@@ -157,10 +153,18 @@
 					</div>
 				</div>
 			<div class="copyright">
-				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a DDS2021</p>
+				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a Franco Buccellato</p>
 			</div>
 		</footer>
-		<script src="js/registroMascota.js" type="module"></script>
-		<script src="js/cierreSesion.js" type="module"></script>
+		<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    	></script>
+		<script src="../js/paginas/enmcontreMascota.js" type="module"></script>
+		<script src="../js/paginas/mapa.js"></script>
+		<script src="../js/paginas/cierreSesion.js" type="module"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 	</body>
 </html>

@@ -1,15 +1,12 @@
-import {Estado} from "./enums/Estado.js"
-import {Sexo} from "./enums/Sexo.js"
-import {TipoMascota} from "./enums/TipoMascota.js"
-import {TipoDocumento} from "./enums/TipoDocumento.js"
 import {Duenio} from "./clases/Duenio.js"
-import {Mascota} from "./clases/Mascota.js"
-import {Usuario} from "./clases/Usuario.js"
+
 
 let duenioActual;
 let dueniosRegistrados;
 
-document.getElementById('boton-registrar-usuario').addEventListener('click', registrarUsuario);
+//document.getElementById('boton-registrar-usuario').addEventListener('click', registrarUsuario);
+$('#boton-registrar-usuario').click( () => registrarUsuario());
+
 
 function agregarNuevoDuenio(nuevoDuenio) {
     let listadoDuenios = localStorage.getItem('duenios');

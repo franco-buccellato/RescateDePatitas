@@ -4,9 +4,9 @@
 	<title>
 		Rescate de Patitas
 	</title>
-	<link rel="stylesheet" type="text/css" href="css/estilos.css">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-	<link rel="icon" href="imagenes/icono-principal.png">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="icon" href="../imagenes/icono-principal.png">
 	<meta charset="utf-8">
 	<meta name="keywords" content="Mascotas, Gato, Perro, Mascota perdida, adopción">
 	<meta name="description" content="Gestión de Mascotas perdidas, encontradas o propias">
@@ -22,19 +22,20 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://kit.fontawesome.com/a2beca5d14.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
 </head>
 	<body>
 		<header id="principio">
 			<div class="encabezado">
-				<a href="index.html"><img class="logo-inicio" src="imagenes/icono-principal.png"></img></a>
-				<h1>Rescate de Patitas</h1>
+				<a href="index.html"><img class="logo-inicio" src="../imagenes/icono-principal.png"></img></a>
+				<h1>
+					Rescate de Patitas.<!--  Bienvenido <script>JSON.parse(localStorage.getItem('duenioActual')).nombre</script>. -->
+				</h1>
 			</div>
 			<nav class="menu">
 				<ul class="menu__menu">
 					<li class="menu__menu__li"><i class="fas fa-home"></i>
-						<a href="index.html" id="inicio"><h3>Inicio</h3></a>
+						<a href="index2.html" id="inicio"><h3>Inicio</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-paw"></i>
 						<a href="registrarMascota.html" id="registrar-mascota"><h3>Registrar mi Mascota</h3></a>
@@ -43,7 +44,7 @@
 						<a href="encontreMascota.html" id="encontre-mascota"><h3>Encontre una Mascota</h3></a>
 					</li>
 					<li class="menu__menu__li"><i class="fas fa-sign-in-alt"></i>
-						<a href="inicioSesion.html" id="inicio-sesion"><h3>Iniciar Sesión</h3></a>
+						<a href="../index.html" id="boton-cierre-sesion"><h3>Cerrar Sesión</h3></a>
 					</li>
 				</ul>
 				<ul class="menu__responsive">
@@ -52,7 +53,7 @@
 					</div>
 					<div class="menu__responsive__div">
 						<li class="menu__responsive__div__li"><i class="fas fa-home"></i>
-							<a href="index.html"><h2>Inicio</h2></a>
+							<a href="index2.html"><h2>Inicio</h2></a>
 						</li>
 						<li class="menu__responsive__div__li"><i class="fas fa-paw"></i>
 							<a href="registrarMascota.html"><h2>Registrar Mascota</h2></a>
@@ -61,41 +62,63 @@
 							<a href="encontreMascota.html"><h2>Encontré Mascota</h2></a>
 						</li>
 						<li class="menu__responsive__div__li"><i class="fas fa-sign-in-alt"></i>
-							<a href="inicioSesion.html"><h2>Iniciar Sesión</h2></a>
+							<a href="../index.html" id="boton-cierre-sesion"><h2>Cerrar Sesión</h2></a>
 						</li>
 					</div>
 				</ul>
 			</nav>
 		</header>
 		<section>
+			<div class="banner">
+				<img src="../imagenes/portada-transparente.png" width="100%" alt="Banner" title="Portada-Principal">
+			</div>
 			<div id="informacion">
-				<div class="container-informacion-mascota">
-					<div class="tarjeta-mascota">
-						<h1>Minerva</h1>
-						<img src="imagenes/socio1.jpg" height="300vw">
-						<div>
-							<h2>Mine</h2>
-						</div>
-						<ul>
-							<li>Edad: <p>2.5</p></li>
-							<li>Especie: <p>Gato</p></li>
-							<li>Raza: <p>Gato</p></li>
-							<li>Descripcion: <p>Ojos Azules</p></li>
-						</ul>
-						
-						<div>
-							<br>
-							<br>
-							<input type="button" class="boton-submit" onclick="window.location.href='/registrarMascota.html'" value="Registrar nueva Mascota">
-						</div>
+				<div class="container-informacion">
+					<div class="informacion-flex">
+						<h3>Sobre Nosotros: </h3>
+						<h4>¿Quienes somos?</h4>
+						<p>
+							Somos una organización que trata de tener un registro de todas las mascotas enlazandolas con sus dueños.
+							De esta manera al perderse una de las mascotas es mas fácil, rápido y sencillo encontrar a sus dueños.
+						</p>
+						<h4>¿Que podes hacer en esta Web App si tenes un mascota?</h4>
+						<p>
+							Podes registrarlas completando el formulario que se encuentra en el bóton de "Regsitrar mi Mascota" en el cual tenes que cargar desde sus caractetisticas
+							físicas hasta su personalidad. Tené en cuenta que para esto tenes que poseer un usuario y estar loguedado.
+						</p>
+						<h4>¿Y si encontraste un mascota?</h4>
+						<p>
+							Podes registrar que encontraste una mascota completando el formulario que se encuentra en el bóton de "Encontré una Mascota" en el cual tenes que cargar sus caractetisticas
+							físicas, fotos y demás información que ayude a sus dueños a identificarla facilmente. Tené en cuenta que para esto tenes que poseer un usuario y estar loguedado.
+						</p>
 					</div>
+				</div>
+			</div>
+			<div id="contacto">
+				<div class="contacto">
+					<form>
+						<div class="contacto__info">
+							<ul class="contacto__info__inputs">	
+								<li><label class="label-contacto">Ingrese su nombre:</label></li>
+								<li><input type="text" name="contacto__info__nombre" required="" class="input_text"></li>
+								<li><label class="label-contacto">Ingrese su apellido:</label></li>
+								<li><input type="text" name="contacto__info__apellido" required=""class="input_text"></li>
+								<li><label class="label-contacto">Ingrese su e-mail:</label></li>
+								<li><input type="email" name="contacto__info__mail" required=""class="input_text"></li>
+							</ul>
+						</div>
+						<div class="contacto__consulta">
+							<textarea class="contacto__consulta__texto" cols="40" rows="8" required=""></textarea>
+							<input type="submit" class="boton-submit">
+						</div>
+					</form>
 				</div>
 			</div>
 		</section>
 		<footer>
 				<div class="footer">
 					<div class="footer__ubicacion">
-						<img src="imagenes/icono-principal.png" height="50px">
+						<img src="../imagenes/icono-principal.png" height="50px">
 						<div class="footer__ubicacion__contenido">	
 							<h6>Direccion de Prueba 123</h6>
 							<h6>Ciudad Autónoma de Bs.As.</h6>
@@ -115,19 +138,19 @@
 						<div class="footer__redes__contenido">
 							<div>
 								<a href="https://www.facebook.com/" target="_BLANK">
-									<img src="imagenes/facebook.png">
+									<img src="../imagenes/facebook.png">
 								</a>
 								<a href="https://www.facebook.com/" target="_BLANK"><h6 class="boton_redes">Facebook</h6></a>
 							</div>
 							<div>
 								<a href="https://www.instagram.com/" target="_BLANK">
-									<img src="imagenes/instagram.png">
+									<img src="../imagenes/instagram.png">
 								</a>
 								<a href="https://www.instagram.com/" target="_BLANK"><h6 class="boton_redes">Instagram</h6></a>
 							</div>
 							<div>
 								<a href="https://mercadolibre.com.ar" target="_BLANK">
-									<img src="imagenes/carrito.jpg">
+									<img src="../imagenes/carrito.jpg">
 								</a>
 								<a href="https://mercadolibre.com.ar" target="_BLANK"><h6 class="boton_redes">Tienda Online</h6></a>
 							</div>
@@ -138,6 +161,12 @@
 				<p>Rescate de Patitas @Copyrigth - Todos los derechos reservados a CODER2021</p>
 			</div>
 		</footer>
-		<!-- <script src="js/main.js" type="module"></script> -->
+		<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    	></script>
+		<script src="../js/paginas/cierreSesion.js" type="module"></script>
 	</body>
 </html>

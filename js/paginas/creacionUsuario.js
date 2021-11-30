@@ -1,6 +1,7 @@
-import {Duenio} from "./clases/Duenio.js"
+import {Duenio} from "../clases/Duenio.js"
 
-document.getElementById('boton-registrar-usuario').addEventListener('click', registrarUsuario);
+//document.getElementById('boton-registrar-usuario').addEventListener('click', registrarUsuario);
+$('#boton-registrar-usuario').click( () => registrarUsuario());
 
 function agregarNuevoDuenio(nuevoDuenio) {
     let listadoDuenios = localStorage.getItem('duenios');
@@ -11,18 +12,30 @@ function agregarNuevoDuenio(nuevoDuenio) {
 }
 
 function registrarUsuario() {
-    let nombre = document.getElementById('creacion-nombre').value;
-    let apellido = document.getElementById('creacion-apellido').value;
-    let mail = document.getElementById('creacion-mail').value;
-    let edad = document.getElementById('creacion-edad').value;
-    let sexo = document.getElementById('creacion-sexo').value;
-    let tipoDocumento = document.getElementById('creacion-tipo-documento').value;
-    let numeroDocumento = document.getElementById('creacion-numero-documento').value;
-    let direccion = document.getElementById('creacion-direccion').value;
-    let telefono = document.getElementById('creacion-telefono').value;
-    let usuario = document.getElementById('creacion-usuario').value;
-    let contrasenia1 = document.getElementById('creacion-contrasenia1').value;
-    let contrasenia2 = document.getElementById('creacion-contrasenia2').value;
+    //let nombre = document.getElementById('creacion-nombre').value;
+    let nombre = $('#creacion-apellido').val()
+    //let apellido = document.getElementById('creacion-apellido').value;
+    let apellido = $('#creacion-apellido').val()
+    //let mail = document.getElementById('creacion-mail').value;
+    let mail = $('#creacion-mail').val()
+    //let edad = document.getElementById('creacion-edad').value;
+    let edad = $('#creacion-edad').val()
+    //let sexo = document.getElementById('creacion-sexo').value;
+    let sexo = $('#creacion-sexo').val()
+    //let tipoDocumento = document.getElementById('creacion-tipo-documento').value;
+    let tipoDocumento = $('#creacion-tipo.documento').val()
+    //let numeroDocumento = document.getElementById('creacion-numero-documento').value;
+    let numeroDocumento = $('#creacion-numero-documento').val()
+    //let direccion = document.getElementById('creacion-direccion').value;
+    let direccion = $('#creacion-direccion').val()
+    //let telefono = document.getElementById('creacion-telefono').value;
+    let telefono = $('#creacion-telefono').val()
+    //let usuario = document.getElementById('creacion-usuario').value;
+    let usuario = $('#creacion-usuario').val()
+    //let contrasenia1 = document.getElementById('creacion-contrasenia1').value;
+    let contrasenia1 = $('#creacion-contrasenia1').val()
+    //let contrasenia2 = document.getElementById('creacion-contrasenia2').value;
+    let contrasenia2 = $('#creacion-contrasenia2').val()
     if(validacionCamposParaCreacion(
         nombre,
         apellido,
