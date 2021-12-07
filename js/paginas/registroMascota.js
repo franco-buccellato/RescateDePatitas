@@ -114,7 +114,7 @@ function mostrarMascotaCargadaPerro(nuevaMascota) {
                             <div>
                                 <br>
                                 <br>
-                                <input type="button" class="boton-submit" onclick="window.location.href='/registrarMascota.html'" value="Registrar nueva Mascota">
+                                <button class="boton-submit" role="link" onclick="window.location='registrarMascota.html'">Registrar nueva Mascota</button>
                             </div>
                         </div>
                     </div>
@@ -150,7 +150,7 @@ function mostrarMascotaCargadaGato(nuevaMascota) {
                             <div>
                                 <br>
                                 <br>
-                                <input type="button" class="boton-submit" onclick="window.location.href='/registrarMascota.html'" value="Registrar nueva Mascota">
+                                <button class="boton-submit" role="link" onclick="window.location='registrarMascota.html'">Registrar nueva Mascota</button>
                             </div>
                         </div>
                     </div>
