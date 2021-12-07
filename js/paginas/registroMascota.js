@@ -1,9 +1,11 @@
-import {Estado} from "./enums/Estado.js"
-import {Mascota} from "./clases/Mascota.js"
-import { Duenio } from "./clases/Duenio.js";
+import {Estado} from "../enums/Estado.js"
+import {Mascota} from "../clases/Mascota.js"
+import {Duenio} from "../clases/Duenio.js";
 
 //document.getElementById('boton-registrar-mascota').addEventListener('click', registrarMascota);
 $('#boton-registrar-mascota').click( () => registrarMascota());
+const URLAPIDOG = 'https://dog.ceo/api/breeds/image/random';
+const URLAPICAT = 'https://api.thecatapi.com/v1/images/search';
 
 function registrarMascota() {
     let nombre = document.getElementById('registro-nombre').value;
@@ -42,7 +44,12 @@ function registrarMascota() {
                 listadoDuenios[i] = duenio;
                 localStorage.setItem('duenios', JSON.stringify(listadoDuenios));
                 console.log('Se agrego la mascota correctamente.');
-                mostrarMascotaCargada(nuevaMascota);
+                if(especie == 'PERRO') {
+                    mostrarMascotaCargadaPerro(nuevaMascota);
+                } else {
+                    mostrarMascotaCargadaGato(nuevaMascota);
+                }
+                //mostrarMascotaCargada2(nuevaMascota);
             }
         }
     } else {
@@ -82,16 +89,87 @@ function obtenerDuenio(duenio) {
     )
 }
 
-function mostrarMascotaCargada(nuevaMascota) {
+function mostrarMascotaCargadaPerro(nuevaMascota) {
+    $.ajax({
+        method: "GET",
+        url:  URLAPIDOG,
+        success: function(res) {
+            console.log(res.message);
+            $(".registro").replaceWith(
+                `<section>
+                <div id="informacion">
+                    <div class="container-informacion-mascota">
+                        <div class="tarjeta-mascota">
+                            <h1>${nuevaMascota.nombre}</h1>
+                            <img src="${res.message}" height="300vw">
+                            <div>
+                                <h2>${nuevaMascota.apodo}</h2>
+                            </div>
+                            <ul>
+                                <li>Edad: <p>${nuevaMascota.edad}</p></li>
+                                <li>Especie: <p>${nuevaMascota.especie}</p></li>
+                                <li>Raza: <p>${nuevaMascota.raza}</p></li>
+                                <li>Descripcion: <p>${nuevaMascota.descripcion}</p></li>
+                            </ul>
+                            <div>
+                                <br>
+                                <br>
+                                <input type="button" class="boton-submit" onclick="window.location.href='/registrarMascota.html'" value="Registrar nueva Mascota">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>`
+            );
+        }
+    });
+}
+
+function mostrarMascotaCargadaGato(nuevaMascota) {
+    $.ajax({
+        method: "GET",
+        url:  URLAPICAT,
+        success: function(res) {
+            console.log(res[0].url);
+            $(".registro").replaceWith(
+                `<section>
+                <div id="informacion">
+                    <div class="container-informacion-mascota">
+                        <div class="tarjeta-mascota">
+                            <h1>${nuevaMascota.nombre}</h1>
+                            <img src="${res[0].url}" height="300vw">
+                            <div>
+                                <h2>${nuevaMascota.apodo}</h2>
+                            </div>
+                            <ul>
+                                <li>Edad: <p>${nuevaMascota.edad}</p></li>
+                                <li>Especie: <p>${nuevaMascota.especie}</p></li>
+                                <li>Raza: <p>${nuevaMascota.raza}</p></li>
+                                <li>Descripcion: <p>${nuevaMascota.descripcion}</p></li>
+                            </ul>
+                            <div>
+                                <br>
+                                <br>
+                                <input type="button" class="boton-submit" onclick="window.location.href='/registrarMascota.html'" value="Registrar nueva Mascota">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>`
+            );
+        }
+    });
+}
+
+/* function mostrarMascotaCargada(nuevaMascota) {
     let tarjetaMascota = document.createElement('div');
     tarjetaMascota.innerHTML =
-        `
-        <section>
+        `<section>
             <div id="informacion">
                 <div class="container-informacion-mascota">
                     <div class="tarjeta-mascota">
                         <h1>${nuevaMascota.nombre}</h1>
-                        <img src="imagenes/socio1.jpg" height="300vw">
+                        <img src="" height="300vw">
                         <div>
                             <h2>${nuevaMascota.apodo}</h2>
                         </div>
@@ -109,8 +187,6 @@ function mostrarMascotaCargada(nuevaMascota) {
                     </div>
                 </div>
             </div>
-        </section>
-        `
-    ;
+        </section>`;
     document.querySelector('.registro').replaceWith(tarjetaMascota);
-}
+} */
