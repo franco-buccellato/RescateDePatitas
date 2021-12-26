@@ -7,7 +7,6 @@ function agregarNuevoDuenio(nuevoDuenio) {
     let listadoDuenios = localStorage.getItem('duenios');
     listadoDuenios = JSON.parse(listadoDuenios);
     listadoDuenios.push(nuevoDuenio);
-    console.log("Dueño agregado.");
     localStorage.setItem('duenios', JSON.stringify(listadoDuenios));
 }
 
@@ -61,11 +60,10 @@ function registrarUsuario() {
                 tipoDocumento,
                 numeroDocumento,
                 direccion,
-                telefono
+                telefono,
+                new Array() 
             );
             agregarNuevoDuenio(nuevoDuenio);
-            console.log("Nuevo dueño cargado correctamente.");
-            window.alert("Nuevo dueño cargado correctamente.");
             //Redirecciono a Login
             window.location.href = "inicioSesion.html";
         } else {

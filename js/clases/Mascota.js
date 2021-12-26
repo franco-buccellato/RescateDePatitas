@@ -9,19 +9,15 @@ export class Mascota {
         apodo,
         edad,
         sexo,
-        raza,
         descripcion,
-        fotos,
         estado
     ) {
-        this.especie = Especie[especie];
+        this.especie = especie;
         this.nombre = nombre;
         this.apodo = apodo;
         this.edad = edad;
-        this.sexo = Sexo[sexo];
-        this.raza = raza;
+        this.sexo = sexo;
         this.descripcion = descripcion;
-        this.fotos = fotos;
-        this.estado = Estado[estado];
+        this.estado = estado;
     }
 }

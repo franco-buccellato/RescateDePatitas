@@ -20,5 +20,6 @@ function main() {
             )]
         )
     );
+    localStorage.getItem('mascotasEncontradas') == null ? localStorage.setItem('mascotasEncontradas', JSON.stringify(new Array())) : null;
     console.log("Estoy corriendo.");
 }

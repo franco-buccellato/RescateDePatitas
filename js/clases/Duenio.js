@@ -14,7 +14,8 @@ export class Duenio {
         tipoDocumento,
         numeroDocumento,
         direccion,
-        telefono
+        telefono,
+        mascotas
     ) {
         this.usuario = new Usuario(nombreUsuario, contrasenioUsuario, mail);
         this.nombre = nombre;
@@ -26,7 +27,7 @@ export class Duenio {
         this.direccion = direccion;
         this.mail = mail;
         this.telefono  = telefono;
-        this.mascotas = new Array();
+        this.mascotas = mascotas == null ? new Array() : mascotas;
     }
 
     agregarMascota(mascota) {
