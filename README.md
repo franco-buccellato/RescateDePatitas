@@ -11,7 +11,8 @@ Entrega Final:
 -Carga de mascota encontrada con almacemiento en local storage.
 -Las mascotas encontradas no se borran del storage si cerramos y abrimos sesión.
 
-Ideas a futuro:
+Ideas a futuro a agregarle a la app:
+- Almacenar todos los datos en una Base de Datos para que se puedan compartir entre todos los usuarios los datos de mascotas perdidas/encontradas.
 - Conectarlo con una API la cual me pueda dar información de todas las razas de perro y gatos.
 - Conectarlo con la API de Google Map para poder informar a la persona que haya encontrado una mascota donde hay un lugar de transito cercano de donde la encontro.
 - Conectarlo con la API de Hogares de Transito disponible.

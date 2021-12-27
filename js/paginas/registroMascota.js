@@ -41,7 +41,8 @@ function registrarMascota() {
                 listadoDuenios[i] = duenio;
                 localStorage.setItem('duenios', JSON.stringify(listadoDuenios));
                 console.log('Se agrego la mascota correctamente.');
-                console.log(especie);
+                localStorage.setItem('duenioActual', JSON.stringify(duenio));
+                console.log('Se actualizo el dueño actual correctamente.');
                 if(especie == 'Perro') {
                     interfaceMuestra.mostrarMascotaCargadaPerro(nuevaMascota, 'registrarMascota.html');
                 } else {
